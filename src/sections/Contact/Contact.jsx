@@ -1,6 +1,29 @@
 import styles from './ContactStyles.module.css';
 
 function Contact() {
+	const onSubmit = async (event) => {
+		event.preventDefault();
+		const formData = new FormData(event.target);
+
+		formData.append('access_key', '38e57b4c-e2cc-4cae-ab4f-f076d7fbc31a');
+
+		const object = Object.fromEntries(formData);
+		const json = JSON.stringify(object);
+
+		const res = await fetch('https://api.web3forms.com/submit', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json',
+			},
+			body: json,
+		}).then((res) => res.json());
+
+		if (res.success) {
+			alert(res.message);
+		}
+	};
+
 	return (
 		<section
 			id='contact'
@@ -8,7 +31,7 @@ function Contact() {
 		>
 			<h1 className='sectionTitle'>Contact</h1>
 
-			<form action=''>
+			<form onSubmit={onSubmit}>
 				<div className='formGroup'>
 					<label
 						htmlFor='name'
@@ -60,7 +83,7 @@ function Contact() {
 				<input
 					className='hover btn'
 					type='submit'
-                    value="Submit"
+					value='Submit'
 				/>
 			</form>
 		</section>
