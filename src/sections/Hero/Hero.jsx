@@ -1,5 +1,6 @@
 import styles from './HeroStyles.module.css';
 import heroimg from '../../assets/hero-img.png';
+import deepak_img from  '../../assets/new.jpeg'
 import sun from '../../assets/sun.svg';
 import moon from '../../assets/moon.svg';
 import twitterLight from '../../assets/twitter-light.svg';
@@ -27,7 +28,7 @@ function Hero() {
 			<div className={styles.colorModeContainer}>
 				<img
 					className={styles.hero}
-					src={heroimg}
+					src={deepak_img}
 					alt='Profile Picture of Deepak'
 				/>
 				<img

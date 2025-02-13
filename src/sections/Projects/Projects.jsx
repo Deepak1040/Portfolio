@@ -4,7 +4,7 @@ import viber from '../../assets/viberr.png';
 import ProjectCard from '../../common/ProjectCard';
 import frestBurger from '../../assets/fresh-burger.png';
 import hippster from '../../assets/hipsster.png';
-import fitlift from '../../assets/fitlift.png';
+
 
 function Projects() {
 	return (
@@ -29,14 +29,8 @@ function Projects() {
 				<ProjectCard
 					src={hippster}
 					link={'https://github.com/Deepak1040/Aora'}
-					h3='Ryde'
-					p='Car Rental App'
-				/>
-				<ProjectCard
-					src={fitlift}
-					link={'https://github.com/Deepak1040/Aora'}
-					h3='Ryde'
-					p='Car Rental App'
+					h3='Red Bamboo'
+					p='Restaurant Landing Page'
 				/>
 			</div>
 		</section>
