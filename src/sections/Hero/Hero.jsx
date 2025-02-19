@@ -1,6 +1,6 @@
 import styles from './HeroStyles.module.css';
 
-import deepak_img from  '../../assets/new1.jpeg'
+import deepak_img from  '../../assets/new.jpeg'
 import sun from '../../assets/sun.svg';
 import moon from '../../assets/moon.svg';
 import twitterLight from '../../assets/twitter-light.svg';
